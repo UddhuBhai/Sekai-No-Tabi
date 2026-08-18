@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sekai No Tabi</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span>世界の旅</span>
+
+            <h1>SEKAI NO TABI</h1>
+
+        </div>
+
+
+        <div class="traveler-stats">
+
+            <span>
+                🌸 TRAVELER
+            </span>
+
+            <span id="navbarLevel">
+                LEVEL 1
+            </span>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <p class="japanese">
+                世界は広い。
+            </p>
+
+            <h2>
+                THE WORLD AWAITS.
+            </h2>
+
+            <p>
+                Every journey begins with a single destination.
+            </p>
+
+        </section>
+
+        <section class="traveler-hud">
+
+            <div class="hud-player">
+
+                <div class="hud-label">
+                    TRAVELER
+                </div>
+
+                <div class="player-level" id="playerLevel">
+                    LEVEL 1
+                </div>
+
+                <div class="player-title">
+                    WANDERING SOUL
+                </div>
+
+            </div>
+
+            <div class="hud-xp">
+
+                <div class="hud-row">
+
+                    <span>
+                        ADVENTURE XP
+                    </span>
+
+                    <span id="playerXP">
+                        0 / 1000 XP
+                    </span>
+
+                </div>
+
+
+                <div class="xp-bar">
+
+                    <div class="xp-progress" id="xpProgress"></div>
+
+                </div>
+
+            </div>
+
+            <div class="hud-stat">
+
+                <div class="hud-stat-icon">
+                    🌍
+                </div>
+
+                <div>
+
+                    <div class="hud-label">
+                        DISCOVERED
+                    </div>
+
+                    <div class="hud-stat-value" id="countryCount">
+                        0 / 195
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hud-stat">
+
+                <div class="hud-stat-icon">
+                    🗺️
+                </div>
+
+                <div>
+
+                    <div class="hud-label">
+                        CONTINENTS
+                    </div>
+
+                    <div class="hud-stat-value">
+                        0 / 7
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="map-container">
+
+
+            <div class="map-header">
+
+                <h3>
+                    🌍 WORLD MAP
+                </h3>
+
+
+                <div class="search">
+
+                    <input
+                        type="text"
+                        id="countrySearch"
+                        placeholder="Search a country..."
+                        autocomplete="off">
+
+                    <button id="discoverBtn">
+                        DISCOVER
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div id="worldMap"></div>
+
+        </section>
+
+        <section class="journey-message">
+
+            <div class="journey-line"></div>
+
+            <p>
+                THE JOURNEY HAS ONLY JUST BEGUN.
+            </p>
+
+            <span>
+                世界を旅しよう
+            </span>
+
+            <div class="journey-line"></div>
+
+        </section>
+
+    </main>
+
+    <div id="discoveryOverlay" class="discovery-overlay">
+
+        <div class="discovery-card">
+
+            <div class="discovery-label">
+                ✦ DESTINATION FOUND ✦
+            </div>
+
+
+            <div id="discoveryCountry" class="discovery-country">
+                JAPAN
+            </div>
+
+
+            <div class="discovery-xp">
+                +500 XP
+            </div>
+
+
+            <div class="discovery-message">
+                「 JOURNEY CONTINUES 」
+            </div>
+
+
+            <button id="closeDiscovery">
+                CONTINUE
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="/js/map.js"></script>
+
+
+</body>
+
+</html>
